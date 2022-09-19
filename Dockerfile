@@ -24,7 +24,7 @@ RUN cp -rvf templatemo_558_klassy_cafe/* .
 RUN rm -rf templatemo_558_klassy_cafe klassy-cafe.zip
 
 ## Setting up the environment variable
-ENV myname shubham_apache2
+ENV myname shubham_apache
 
 ## Restarting the Apache
 CMD /usr/sbin/httpd -D FOREGROUND
