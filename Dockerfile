@@ -9,19 +9,19 @@ RUN yum update -y && \
     yum install applydeltarpm httpd zip unzip wget net-tools -y
 
 ## Adding the website content in the document root path
-ADD https://www.free-css.com/assets/files/free-css-templates/download/page280/klassy-cafe.zip /var/www/html/
+ADD https://www.free-css.com/assets/files/free-css-templates/download/page282/pro.zip /var/www/html/
 
 ## Changing the Working Directory
 WORKDIR /var/www/html/
 
 ## Extracting the content of website 
-RUN unzip klassy-cafe.zip
+RUN unzip pro.zip
 
 ## coping the cs folder content to /var/www/html folder
-RUN cp -rvf templatemo_558_klassy_cafe/* .
+RUN cp -rvf pro-html/* .
 
 ## Removing the unnessary files and folders
-RUN rm -rf templatemo_558_klassy_cafe klassy-cafe.zip
+RUN rm -rf pro-html pro.zip
 
 ## Setting up the environment variable
 ENV myname shubham_apache
